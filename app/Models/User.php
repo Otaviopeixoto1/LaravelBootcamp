@@ -23,6 +23,14 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function chirps()
+
+    {
+
+        return $this->hasMany(Chirp::class);
+
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
